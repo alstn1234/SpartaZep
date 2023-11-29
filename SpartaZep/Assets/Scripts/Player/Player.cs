@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     {
         ChangePlayerData();
         PlayerData.Instance.ChangeData += ChangePlayerData;
+        GameManager.Instance.AddAttendee(PlayerData.Instance.playerName);
     }
 
     public void ChangePlayerData()

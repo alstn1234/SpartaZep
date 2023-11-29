@@ -17,7 +17,6 @@ public class PlayerData : MonoBehaviour
         set
         {
             playerSO.speed = value;
-            Debug.Log("speed 변경");
             CallChangeData();
         }
     }
@@ -27,7 +26,6 @@ public class PlayerData : MonoBehaviour
         set
         {
             playerSO.playerName = value;
-            Debug.Log("name 변경");
             CallChangeData();
 
         }
@@ -38,7 +36,6 @@ public class PlayerData : MonoBehaviour
         set
         {
             playerSO.characterName = value;
-            Debug.Log("cname 변경");
             CallChangeData();
 
         }

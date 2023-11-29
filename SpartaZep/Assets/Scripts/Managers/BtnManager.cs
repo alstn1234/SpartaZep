@@ -68,10 +68,12 @@ public class BtnManager : MonoBehaviour
 
     public void ChangeName()
     {
+        GameManager.Instance.RemoveAttendee(PlayerData.Instance.playerName);
         var textLength = nameText.text.Length - 1;
         if (textLength >= 2 && textLength <= 10)
         {
             PlayerData.Instance.playerName = nameText.text;
+            GameManager.Instance.AddAttendee(PlayerData.Instance.playerName);
             characterInfoPopup.SetActive(false);
         }
     }
